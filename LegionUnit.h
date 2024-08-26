@@ -29,6 +29,9 @@ class LegionUnit
      virtual void retreat()=0; 
      virtual void defend() = 0;
 
+     virtual int setHealth(int health ) =0;
+     virtual int setDefence(int beaten) =0;
+
      virtual int getHealth() const = 0;
 
      bool isAlive();
