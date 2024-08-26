@@ -7,9 +7,9 @@ using namespace std;
 
 class WoodlandInfantry : public Infantry
 {
-     private:
-    int health;
-    int defense;
+//      private:
+//     int health;
+//     int defense;
     
     public:
        WoodlandInfantry(int health, int defense);
@@ -19,6 +19,7 @@ class WoodlandInfantry : public Infantry
         void  retreat() override;
 
          int getHealth() const override;
+         int getDefense() const override;
 
          int setHealth(int health)override;
         int setDefense(int defense)override;

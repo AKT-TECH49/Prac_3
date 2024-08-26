@@ -1,21 +1,21 @@
 #include "WoodlandFactory.h"
 
-LegionUnit* WoodlandFactory::createInfantry()
+LegionUnit *WoodlandFactory::createInfantry()
 {
-    return new WoodlandInfantry(100,60 );
+    return new WoodlandInfantry(100, 60);
 }
 
-LegionUnit* WoodlandFactory:: createCavalry()
+LegionUnit *WoodlandFactory::createCavalry()
 {
-      return new WoodlandCavalry( 100,70);
+    return new WoodlandCavalry(100, 70);
 }
 
-LegionUnit* WoodlandFactory:: createArtillery()
+LegionUnit *WoodlandFactory::createArtillery()
 {
-     return new WoodlandArtillery( 100 ,65);
+    return new WoodlandArtillery(100, 65);
 }
 
-void WoodlandFactory:: delpoyArtillery()
+void WoodlandFactory::delpoyArtillery()
 {
-    //need to e creative here 
+    // need to e creative here
 }

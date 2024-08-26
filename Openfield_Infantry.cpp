@@ -5,10 +5,8 @@
 using namespace std;
 
 
-OpenFieldInfantry::OpenFieldInfantry(int health , int defence):Infantry(health , defense)
+OpenFieldInfantry::OpenFieldInfantry(int health , int defense):Infantry(health , defense)
 {    
-     this->health = health;
-     this->defense = defense;
        this->name = "OpenField Infantry";
 }
 
@@ -27,12 +25,12 @@ void OpenFieldInfantry::attack(LegionUnit* enemy)
    enemy->setDefense(beaten); 
 }
 
-int OpenFieldCavalry::setHealth(int health)
+int OpenFieldInfantry::setHealth(int health)
 {
      this->health -= health;
 }
 
-int OpenFieldCavalry::setDefense(int beaten)
+int OpenFieldInfantry::setDefense(int beaten)
 {
      this->defense = beaten;
 }
@@ -56,20 +54,7 @@ int OpenFieldInfantry::getHealth() const
     return health;
 }
 
-// void OpenFieldInfantry:: move() 
-// {
-//         position += 3; // Faster movement in open fields
-//         std::cout << "OpenField Infantry advances rapidly across the field to position " << position << std::endl;
-// }
-
-// void OpenFieldInfantry:: attack() 
-// {
-//         std::cout << "OpenField Infantry charges with full force, dealing " << getPower() << " damage." << std::endl;
-// }
-
-// std::string OpenFieldInfantry::getType() const 
-// {
-//         return "OpenField Infantry";
-// }
-
-
+int OpenFieldInfantry::getDefense() const
+{
+    return this->defense;
+}

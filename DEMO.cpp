@@ -54,16 +54,41 @@ void TestMethods()
      OpenFieldFactory Factory ;
     LegionUnit* openFieldC  = Factory.createCavalry();
     openFieldC->move(); 
+    std::cout<< openFieldC->getType();
+    std::cout<<std::endl<< openFieldC->getHealth();
+    std::cout<<std::endl<< openFieldC->getDefense();
+
 
      WoodlandFactory Factory1 ;
     LegionUnit* woodyC  = Factory1.createArtillery();
+    std::cout<<std::endl;
+    woodyC->defend();
     std::cout<<std::endl<< woodyC->getType();
+     std::cout<<std::endl<< woodyC->getHealth();
+      std::cout<<std::endl<< woodyC->getDefense();
+
 
     RiverBankFactory Factory2;
     LegionUnit* rivey = Factory2.createInfantry();
+    std::cout<<std::endl;
+    rivey->retreat();
+    std::cout<<std::endl<<rivey->getType()<<std::endl;
     std::cout<<std::endl<<rivey->getHealth()<<std::endl;
-     cout << "OpenField attacks RiverField" <<endl;
+    std::cout<<std::endl<<rivey->getDefense()<<std::endl;
+
+     cout << "RiverBank Infantry attacks OpenField Cavalry" <<endl;
       rivey->attack(openFieldC); 
+      std::cout<<"OpenField Cavalry after attacked: "<<std::endl
+      <<openFieldC->getHealth()<<std::endl<<
+      openFieldC->getDefense()<<
+      std::endl;
+
+
+      BattleStrategy* strat = new Flanking();
+      
+
+
+
 
    
    

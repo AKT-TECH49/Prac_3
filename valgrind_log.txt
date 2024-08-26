@@ -1,64 +1,64 @@
-==89066== Memcheck, a memory error detector
-==89066== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==89066== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==89066== Command: ./main
-==89066== 
-==89066== 
-==89066== HEAP SUMMARY:
-==89066==     in use at exit: 333 bytes in 6 blocks
-==89066==   total heap usage: 10 allocs, 4 frees, 75,121 bytes allocated
-==89066== 
-==89066== 31 bytes in 1 blocks are indirectly lost in loss record 1 of 6
-==89066==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==89066==    by 0x49AF0BD: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==89066==    by 0x49B025D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==89066==    by 0x114A20: OpenFieldCavalry::OpenFieldCavalry(int, int) (Openfield_Cavalry.cpp:9)
-==89066==    by 0x1145FF: OpenFieldFactory::createCavalry() (OpenFieldFactory.cpp:14)
-==89066==    by 0x110F1D: TestMethods() (DEMO.cpp:55)
-==89066==    by 0x110EE3: main (DEMO.cpp:45)
-==89066== 
-==89066== 31 bytes in 1 blocks are indirectly lost in loss record 2 of 6
-==89066==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==89066==    by 0x49AF0BD: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==89066==    by 0x49B025D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==89066==    by 0x119BBE: WoodlandArtillery::WoodlandArtillery(int, int) (Woodland_Artillery.cpp:11)
-==89066==    by 0x119AB1: WoodlandFactory::createArtillery() (WoodlandFactory.cpp:15)
-==89066==    by 0x110F4F: TestMethods() (DEMO.cpp:59)
-==89066==    by 0x110EE3: main (DEMO.cpp:45)
-==89066== 
-==89066== 31 bytes in 1 blocks are indirectly lost in loss record 3 of 6
-==89066==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==89066==    by 0x49AF0BD: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==89066==    by 0x49B025D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==89066==    by 0x1155D8: RiverbankInfantry::RiverbankInfantry(int, int) (Riverbank_Infantry.cpp:9)
-==89066==    by 0x114F67: RiverBankFactory::createInfantry() (RiverBankFactory.cpp:10)
-==89066==    by 0x110FBF: TestMethods() (DEMO.cpp:63)
-==89066==    by 0x110EE3: main (DEMO.cpp:45)
-==89066== 
-==89066== 111 (80 direct, 31 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 6
-==89066==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==89066==    by 0x1145EA: OpenFieldFactory::createCavalry() (OpenFieldFactory.cpp:14)
-==89066==    by 0x110F1D: TestMethods() (DEMO.cpp:55)
-==89066==    by 0x110EE3: main (DEMO.cpp:45)
-==89066== 
-==89066== 111 (80 direct, 31 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 6
-==89066==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==89066==    by 0x119A9C: WoodlandFactory::createArtillery() (WoodlandFactory.cpp:15)
-==89066==    by 0x110F4F: TestMethods() (DEMO.cpp:59)
-==89066==    by 0x110EE3: main (DEMO.cpp:45)
-==89066== 
-==89066== 111 (80 direct, 31 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 6
-==89066==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==89066==    by 0x114F52: RiverBankFactory::createInfantry() (RiverBankFactory.cpp:10)
-==89066==    by 0x110FBF: TestMethods() (DEMO.cpp:63)
-==89066==    by 0x110EE3: main (DEMO.cpp:45)
-==89066== 
-==89066== LEAK SUMMARY:
-==89066==    definitely lost: 240 bytes in 3 blocks
-==89066==    indirectly lost: 93 bytes in 3 blocks
-==89066==      possibly lost: 0 bytes in 0 blocks
-==89066==    still reachable: 0 bytes in 0 blocks
-==89066==         suppressed: 0 bytes in 0 blocks
-==89066== 
-==89066== For lists of detected and suppressed errors, rerun with: -s
-==89066== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+==130343== Memcheck, a memory error detector
+==130343== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==130343== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==130343== Command: ./DEMO
+==130343== 
+==130343== 
+==130343== HEAP SUMMARY:
+==130343==     in use at exit: 309 bytes in 6 blocks
+==130343==   total heap usage: 14 allocs, 8 frees, 75,326 bytes allocated
+==130343== 
+==130343== 31 bytes in 1 blocks are indirectly lost in loss record 1 of 6
+==130343==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==130343==    by 0x49AF0BD: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==130343==    by 0x49B025D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==130343==    by 0x115E8A: OpenFieldCavalry::OpenFieldCavalry(int, int) (Openfield_Cavalry.cpp:7)
+==130343==    by 0x115979: OpenFieldFactory::createCavalry() (OpenFieldFactory.cpp:14)
+==130343==    by 0x111F3D: TestMethods() (DEMO.cpp:55)
+==130343==    by 0x111F03: main (DEMO.cpp:45)
+==130343== 
+==130343== 31 bytes in 1 blocks are indirectly lost in loss record 2 of 6
+==130343==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==130343==    by 0x49AF0BD: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==130343==    by 0x49B025D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==130343==    by 0x11D6FC: WoodlandArtillery::WoodlandArtillery(int, int) (Woodland_Artillery.cpp:11)
+==130343==    by 0x11D603: WoodlandFactory::createArtillery() (WoodlandFactory.cpp:15)
+==130343==    by 0x112029: TestMethods() (DEMO.cpp:63)
+==130343==    by 0x111F03: main (DEMO.cpp:45)
+==130343== 
+==130343== 31 bytes in 1 blocks are indirectly lost in loss record 3 of 6
+==130343==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==130343==    by 0x49AF0BD: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==130343==    by 0x49B025D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==130343==    by 0x118E40: RiverbankInfantry::RiverbankInfantry(int, int) (Riverbank_Infantry.cpp:10)
+==130343==    by 0x1165E5: RiverBankFactory::createInfantry() (RiverBankFactory.cpp:10)
+==130343==    by 0x112143: TestMethods() (DEMO.cpp:72)
+==130343==    by 0x111F03: main (DEMO.cpp:45)
+==130343== 
+==130343== 103 (72 direct, 31 indirect) bytes in 1 blocks are definitely lost in loss record 4 of 6
+==130343==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==130343==    by 0x115964: OpenFieldFactory::createCavalry() (OpenFieldFactory.cpp:14)
+==130343==    by 0x111F3D: TestMethods() (DEMO.cpp:55)
+==130343==    by 0x111F03: main (DEMO.cpp:45)
+==130343== 
+==130343== 103 (72 direct, 31 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 6
+==130343==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==130343==    by 0x11D5EE: WoodlandFactory::createArtillery() (WoodlandFactory.cpp:15)
+==130343==    by 0x112029: TestMethods() (DEMO.cpp:63)
+==130343==    by 0x111F03: main (DEMO.cpp:45)
+==130343== 
+==130343== 103 (72 direct, 31 indirect) bytes in 1 blocks are definitely lost in loss record 6 of 6
+==130343==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==130343==    by 0x1165D0: RiverBankFactory::createInfantry() (RiverBankFactory.cpp:10)
+==130343==    by 0x112143: TestMethods() (DEMO.cpp:72)
+==130343==    by 0x111F03: main (DEMO.cpp:45)
+==130343== 
+==130343== LEAK SUMMARY:
+==130343==    definitely lost: 216 bytes in 3 blocks
+==130343==    indirectly lost: 93 bytes in 3 blocks
+==130343==      possibly lost: 0 bytes in 0 blocks
+==130343==    still reachable: 0 bytes in 0 blocks
+==130343==         suppressed: 0 bytes in 0 blocks
+==130343== 
+==130343== For lists of detected and suppressed errors, rerun with: -s
+==130343== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)

@@ -5,9 +5,9 @@
 #include "LegionUnit.h"
 
 class OpenFieldCavalry : public Cavalry {
-     private:
-    int health;
-    int defense;
+    //  private:
+    // int health;
+    // int defense;
 
 public:
     OpenFieldCavalry(int health, int defense);
@@ -23,6 +23,7 @@ public:
     int setDefense(int beaten)override;
     //getter
       int getHealth() const override;
+      int getDefense() const override;
    
 };
 

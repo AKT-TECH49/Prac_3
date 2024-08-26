@@ -1,18 +1,23 @@
 #include "Riverbank_Artillery.h"
 
 #include "Artillery.h"
+#include <map>
 
 
 RiverbankArtillery::RiverbankArtillery(int health , int defence):Artillery(health , defence)  
 {
-     this->health = health;
-     this->defense = defence;
         this->name = "RiverBank Artillery";
 }
 
 void RiverbankArtillery::move()
 {
      std::cout <<"Moving" <<std::endl;
+     map<string,string> direction; 
+   direction["Air"] =  "flying";
+   direction["Ground"] = "on the ground";
+   cout <<"---------------" << this->name <<"'s----------------"<<endl;
+   cout << " Initial position:" << direction["Air"] <<endl;
+   cout << " Current position:" << direction["Ground"] <<endl;
 }
 
 
@@ -55,6 +60,11 @@ void RiverbankArtillery::retreat()
 int RiverbankArtillery::getHealth() const
 {
     return health;
+}
+
+int RiverbankArtillery::getDefense() const
+{
+    return this->defense;
 }
 
 // void RiverbankArtillery::attack() 

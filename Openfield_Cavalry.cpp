@@ -4,9 +4,7 @@
 
 OpenFieldCavalry::OpenFieldCavalry(int health , int defense):Cavalry(health , defense)
 {
-     this->health = health;
-     this->defense = defense;
-    this->name = "OpenField OpenFieldCavalry";
+    this->name = "OpenField Cavalry";
 }
 
 
@@ -55,18 +53,7 @@ int OpenFieldCavalry::getHealth() const
     return health;
 }
 
-// void OpenFieldOpenFieldCavalry:: move()  
-// {
-//         position += 4; // Very fast movement in open fields
-//         std::cout << "OpenField OpenFieldCavalry charges across the open field to position " << position << std::endl;
-// }
-
-// void OpenFieldOpenFieldCavalry::attack()
-// {
-//         std::cout << "OpenField OpenFieldCavalry delivers a powerful charge, dealing " << (getPower() + 5) << " damage." << std::endl;
-// }
-
-// std::string OpenFieldOpenFieldCavalry:: getType() const 
-//     {
-//         return "OpenField OpenFieldCavalry";
-//     }
+int OpenFieldCavalry::getDefense() const
+{
+    return this->defense;
+}

@@ -2,12 +2,14 @@
 #include "Infantry.h"
 
 #include <iostream>
+#include <map>
+
 using namespace std;
 
 WoodlandInfantry::WoodlandInfantry(int health, int defense):Infantry(health , defense)
 {
-     this->health = health;
-     this->defense = defense;
+     // this->health = health;
+     // this->defense = defense;
     name = "WoodLandInfantry";
 }
 
@@ -62,6 +64,11 @@ void WoodlandInfantry::retreat()
 int WoodlandInfantry::getHealth() const
 {
     return this->health;
+}
+
+int WoodlandInfantry::getDefense() const
+{
+    return this->defense;
 }
 
 // void WoodlandInfantry::move()

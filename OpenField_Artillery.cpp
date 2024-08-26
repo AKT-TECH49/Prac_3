@@ -6,8 +6,6 @@ using namespace std;
 
 OpenFieldArtillery::OpenFieldArtillery(int health , int defense):Artillery(health , defense)  
 {       
-     this->health = health;
-     this->defense = defense;
      this->name = "OpenField Artillery";      
 }
 
@@ -60,6 +58,10 @@ int OpenFieldArtillery::getHealth() const
 return this->health;
 }
 
+int OpenFieldArtillery::getDefense() const
+{
+    return this->defense;
+}
 
 //  void OpenFieldArtillery::attack() 
 // {

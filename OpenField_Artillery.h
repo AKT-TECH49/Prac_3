@@ -8,9 +8,9 @@ using namespace std;
 
 class OpenFieldArtillery : public Artillery 
 {  
-    private:
-    int health;
-    int defense;
+    // private:
+    // int health;
+    // int defense;
     
     public:
         OpenFieldArtillery(int health, int defense);
@@ -21,11 +21,12 @@ class OpenFieldArtillery : public Artillery
      void  retreat() override;
 
      //setter
-     int setHealth(int health); 
-    int setDefense(int beaten); 
+     int setHealth(int health) override; 
+    int setDefense(int beaten) override; 
 
     //getter
       int getHealth() const override;
+      int getDefense() const override;
 
 };
 

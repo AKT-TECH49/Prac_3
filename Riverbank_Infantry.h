@@ -5,9 +5,9 @@
 
 class RiverbankInfantry : public Infantry
 {
-   private:
-    int health;
-    int defense;
+  //  private:
+  //   int health;
+  //   int defense;
 
     
    public:
@@ -23,5 +23,6 @@ class RiverbankInfantry : public Infantry
 
     
      int getHealth() const override;
+     int getDefense() const override;
 };
 #endif

@@ -1,13 +1,13 @@
 #include "Woodland_Artillery.h"
 #include "Artillery.h"
-
+#include <map>
 #include <iostream>
 using namespace std;
 
 WoodlandArtillery::WoodlandArtillery(int health, int defense):Artillery(health,defense)
 {
-     this->health = health;
-     this->defense = defense;
+     // this->health = health;
+     // this->defense = defense;
     this->name = "WoodLand Artillery ";
 }
 
@@ -33,12 +33,12 @@ void WoodlandArtillery::attack(LegionUnit* enemy)
    enemy->setDefense(beaten); 
 }
 
-int RiverbankInfantry::setHealth(int health)
+int WoodlandArtillery::setHealth(int health)
 {
      this->health -= health;
 }
 
-int RiverbankInfantry::setDefense(int beaten)
+int WoodlandArtillery::setDefense(int beaten)
 {
      this->defense = beaten;
 }
@@ -59,4 +59,9 @@ void WoodlandArtillery::retreat()
 int WoodlandArtillery::getHealth() const
 {
     return this->health;
+}
+
+int WoodlandArtillery::getDefense() const
+{
+    return this->defense;
 }

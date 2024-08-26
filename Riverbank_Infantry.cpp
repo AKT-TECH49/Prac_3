@@ -2,13 +2,14 @@
 #include "Infantry.h"
 
 #include <iostream>
+#include <map>
 using namespace std;
 
 RiverbankInfantry::RiverbankInfantry(int health, int defense) :Infantry(health , defense)
 {
     this->name = "RiverBank Infantry";
-    this->health = health;    
-    this->defense = defense;
+//     this->health = health;    
+//     this->defense = defense;
 }
 
 void RiverbankInfantry::move()
@@ -59,6 +60,11 @@ void RiverbankInfantry::retreat()
 int RiverbankInfantry::getHealth() const
 {
     return health;
+}
+
+int RiverbankInfantry::getDefense() const
+{
+    return this->defense;
 }
 
 // void RiverbankInfantry::move()

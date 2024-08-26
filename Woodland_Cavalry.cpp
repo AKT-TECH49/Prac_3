@@ -2,12 +2,13 @@
 
 
 #include <iostream>
+#include <map>
 using namespace std;
 
 WoodlandCavalry::WoodlandCavalry(int health, int defense):Cavalry(health , defense)
 {
-     this->health = health;
-     this->defense = defense;
+     // this->health = health;
+     // this->defense = defense;
    this->name = "WoodLand Cavalry";
 }
 void WoodlandCavalry::move()
@@ -62,6 +63,11 @@ void WoodlandCavalry::retreat()
 int WoodlandCavalry::getHealth() const
 {
     return this->health;
+}
+
+int WoodlandCavalry::getDefense() const
+{
+    return this->defense;
 }
 
 // void WoodlandCavalry::move()

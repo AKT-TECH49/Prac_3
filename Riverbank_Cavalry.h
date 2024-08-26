@@ -5,9 +5,9 @@
 
 class RiverbankCavalry : public Cavalry
 {
-   private:
-    int health;
-    int defense;
+  //  private:
+  //   int health;
+  //   int defense;
     
    public:
        RiverbankCavalry(int health, int defense);
@@ -18,10 +18,11 @@ class RiverbankCavalry : public Cavalry
     void  defend() override;
      void  retreat() override;
 
-      int setHealth(int health); 
-    int setDefense(int beaten);
+      int setHealth(int health) override; 
+    int setDefense(int beaten) override;
 
       int getHealth() const override;
+      int getDefense() const override;
      
 
 

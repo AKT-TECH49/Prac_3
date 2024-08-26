@@ -6,9 +6,16 @@
 #include <iostream>
 #include <memory>
 
-#include "Artillery.h"
-#include "Infantry.h"
-#include "Cavalry.h"
+#include "OpenField_Artillery.h"
+#include "Openfield_Infantry.h"
+#include "Openfield_Cavalry.h"
+#include "Riverbank_Cavalry.h"
+#include "Riverbank_Infantry.h"
+#include "Riverbank_Artillery.h"
+#include "Woodland_Cavalry.h"
+#include "WoodLand_Infantry.h"
+#include "Woodland_Artillery.h"
+
 #include "LegionFactory.h"
 
 
@@ -22,15 +29,9 @@ class BattleStrategy
     int tacticsLevel;
     std::string name;
 
-
-     std::vector<Artillery*> artilleryUnits;
-    std::vector<Infantry*> infantryUnits;
-    std::vector<Cavalry*> cavalryUnits;
-
-
 public:
     
-    BattleStrategy(const std::string &name, int tacticsLevel);
+    BattleStrategy(std::string name);
         
 
     virtual ~BattleStrategy() = default;
@@ -42,15 +43,9 @@ public:
     int getTacticsLevel() const;
     void setTacticsLevel(int level);
 
-    void produceUnits(LegionFactory* factory);
+    void addLegionUnits(LegionUnit* lg);
 
-    void addArtilleryUnit(Artillery* unit);
-    void addInfantryUnit(Infantry* unit);
-    void addCavalryUnit(Cavalry* unit);
-    // Getters
-    std::vector<Artillery*> getArtilleryUnits() const;
-    std::vector<Infantry*> getInfantryUnits() const;
-    std::vector<Cavalry*> getCavalryUnits() const;
+
 
 };
 

@@ -2,19 +2,19 @@
 #include "Cavalry.h"
 
 #include <iostream>
+#include <map>
 using namespace std;
 
 RiverbankCavalry::RiverbankCavalry(int health, int defense) :Cavalry(health , defense)
 {
-     this->health = health;
-     this->defense = defense;
+    
    this->name = "RiverBank Cavalry";
 }
 
 void RiverbankCavalry::move()
 {
-     std::cout <<"Moving" <<std::endl;
-      map<string,string> direction; 
+   std::cout <<"Moving" <<std::endl;
+   map<string,string> direction; 
    direction["Air"] =  "flying";
    direction["Ground"] = "on the ground";
    cout <<"---------------" << this->name <<"'s----------------"<<endl;
@@ -60,6 +60,11 @@ void RiverbankCavalry::retreat()
 int RiverbankCavalry::getHealth() const
 {
     return this->health;
+}
+
+int RiverbankCavalry::getDefense() const
+{
+    return this->defense;
 }
 
 // void RiverbankCavalry::move()
