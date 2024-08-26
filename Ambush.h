@@ -25,12 +25,7 @@ class Ambush : public BattleStrategy
     Ambush();
    ~Ambush() ;
     void engage() const override;
-
-
-    //getters 
-     std::string getUnitTypes() override;
-    //setters
-
+    
 };
 
 
