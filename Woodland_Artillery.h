@@ -16,10 +16,13 @@ class WoodlandArtillery : public Artillery
        WoodlandArtillery(int health, int defense);
 
        void move() override;
-     void  attack() override;
+     void  attack(LegionUnit* enemy) override;
    void  defend() override;
     void  retreat() override;
     int getHealth() const override;
+
+    int setHealth(int health)override;
+    int setDefense(int defense)override;
        
 
 };

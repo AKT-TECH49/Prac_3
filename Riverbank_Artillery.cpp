@@ -16,21 +16,40 @@ void RiverbankArtillery::move()
 }
 
 
-void RiverbankArtillery::attack()
+void RiverbankArtillery::attack(LegionUnit* enemy)
 {
      std::cout <<"Attacking "<<std::endl;
+     int strength = (this->health + this->defense)/9; 
+   int beaten = (this->health + this->defense)/10;
+   enemy->setHealth(strength);
+   enemy->setDefense(beaten);  
+
 }
+
+
+int RiverbankArtillery::setHealth(int health)
+{
+     this->health -= health;
+}
+
+int RiverbankArtillery::setDefense(int beaten)
+{
+     this->defense = beaten;
+}
+
 
 
 void RiverbankArtillery::defend()
 {
     std::cout << "Defending " << std::endl;
+      move();
 }
 
 
 void RiverbankArtillery::retreat()
 {
      std::cout << "Retreating" << std::endl;
+     this->health +=3;
 }
 
 int RiverbankArtillery::getHealth() const

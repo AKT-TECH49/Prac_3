@@ -62,6 +62,8 @@ void TestMethods()
     RiverBankFactory Factory2;
     LegionUnit* rivey = Factory2.createInfantry();
     std::cout<<std::endl<<rivey->getHealth()<<std::endl;
+     cout << "OpenField attacks RiverField" <<endl;
+      rivey->attack(openFieldC); 
 
    
    

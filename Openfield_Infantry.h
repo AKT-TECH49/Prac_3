@@ -12,9 +12,12 @@ class OpenFieldInfantry : public Infantry
     public:
         OpenFieldInfantry(int health, int defence);
         void move()override;
-        void  attack()override;
+       void  attack(LegionUnit* enemy) override;
         void  defend() override;
         void  retreat() override;
+
+         int setHealth(int health)override;
+         int setDefense(int beaten)override;
 
          int getHealth() const override;
 };

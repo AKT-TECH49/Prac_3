@@ -14,10 +14,14 @@ class RiverbankInfantry : public Infantry
        RiverbankInfantry(int health, int defense);
 
        void move() override;
-     void  attack() override ;
+     void  attack(LegionUnit* enemy) override ;
      void  defend() override ;
     void  retreat() override;
 
+   int setHealth(int health)override;
+    int setDefense(int defense)override;
+
+    
      int getHealth() const override;
 };
 #endif

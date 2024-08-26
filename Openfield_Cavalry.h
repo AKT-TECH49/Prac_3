@@ -14,10 +14,14 @@ public:
     
 
     void move() override;
-    void  attack() override;
+   void  attack(LegionUnit* enemy) override;
     void  defend() override;
      void  retreat() override;
 
+     //setter
+     int setHealth(int health)override;
+    int setDefense(int beaten)override;
+    //getter
       int getHealth() const override;
    
 };

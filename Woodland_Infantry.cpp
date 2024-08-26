@@ -14,24 +14,49 @@ WoodlandInfantry::WoodlandInfantry(int health, int defense):Infantry(health , de
 void WoodlandInfantry::move()
 {
      std::cout <<"Moving" <<std::endl;
+     map<string,string> direction; 
+   direction["Air"] =  "flying";
+   direction["Ground"] = "on the ground";
+   cout <<"---------------" << this->name <<"'s----------------"<<endl;
+   cout << " Initial position:" << direction["Air"] <<endl;
+   cout << " Current position:" << direction["Ground"] <<endl;
 }
 
 
-void WoodlandInfantry::attack()
+void WoodlandInfantry::attack(LegionUnit* enemy)
 {
      std::cout <<"Attacking "<<std::endl;
+     int strength = (this->health + this->defense)/9; 
+   int beaten = (this->health + this->defense)/10;
+   enemy->setHealth(strength);
+   enemy->setDefense(beaten); 
 }
+
+
+int WoodlandInfantry::setHealth(int health)
+{
+     this->health -= health;
+}
+
+int WoodlandInfantry::setDefense(int beaten)
+{
+     this->defense = beaten;
+}
+
+
 
 
 void WoodlandInfantry::defend()
 {
     std::cout << "Defending " << std::endl;
+    move();
 }
 
 
 void WoodlandInfantry::retreat()
 {
      std::cout << "Retreating" << std::endl;
+     this->health +=5;
 }
 
 int WoodlandInfantry::getHealth() const

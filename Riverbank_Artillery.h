@@ -16,9 +16,12 @@ class RiverbankArtillery : public Artillery
     RiverbankArtillery(int health, int defence);
 
      void move() override;
-    void  attack() override;
+    void  attack(LegionUnit* enemy) override;
     void  defend() override;
      void  retreat() override;
+
+    int setHealth(int health); 
+    int setDefense(int beaten); 
 
       int getHealth() const override;
   

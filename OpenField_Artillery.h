@@ -16,11 +16,15 @@ class OpenFieldArtillery : public Artillery
         OpenFieldArtillery(int health, int defense);
         
      void move() override;
-     void  attack() override;
+    void  attack(LegionUnit* enemy) override;
     void  defend() override;
      void  retreat() override;
 
+     //setter
+     int setHealth(int health); 
+    int setDefense(int beaten); 
 
+    //getter
       int getHealth() const override;
 
 };

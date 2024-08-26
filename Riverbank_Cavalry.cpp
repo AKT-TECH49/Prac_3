@@ -14,24 +14,47 @@ RiverbankCavalry::RiverbankCavalry(int health, int defense) :Cavalry(health , de
 void RiverbankCavalry::move()
 {
      std::cout <<"Moving" <<std::endl;
+      map<string,string> direction; 
+   direction["Air"] =  "flying";
+   direction["Ground"] = "on the ground";
+   cout <<"---------------" << this->name <<"'s----------------"<<endl;
+   cout << " Initial position:" << direction["Air"] <<endl;
+   cout << " Current position:" << direction["Ground"] <<endl;
+
 }
 
 
-void RiverbankCavalry::attack()
+void RiverbankCavalry::attack(LegionUnit* enemy)
 {
      std::cout <<"Attacking "<<std::endl;
+     int strength = (this->health + this->defense)/9; 
+   int beaten = (this->health + this->defense)/10;
+   enemy->setHealth(strength);
+   enemy->setDefense(beaten); 
+}
+
+int RiverbankCavalry::setHealth(int health)
+{
+     this->health -= health;
+}
+
+int RiverbankCavalry::setDefense(int beaten)
+{
+     this->defense = beaten;
 }
 
 
 void RiverbankCavalry::defend()
 {
     std::cout << "Defending " << std::endl;
+     move();
 }
 
 
 void RiverbankCavalry::retreat()
 {
      std::cout << "Retreating" << std::endl;
+     this->health +=3;
 }
 
 int RiverbankCavalry::getHealth() const

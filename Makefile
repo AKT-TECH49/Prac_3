@@ -3,7 +3,7 @@ CXX = g++
 CXXFLAGS = -std=c++11 -g -Wall -Wextra -pedantic 
 
 # Define the target executable
-TARGET = main
+TARGET = DEMO
 
 # Find all .cpp files and convert them to .o files
 SRCS = $(wildcard *.cpp)

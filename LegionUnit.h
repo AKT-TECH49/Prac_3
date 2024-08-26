@@ -25,7 +25,7 @@ class LegionUnit
 
 
      virtual void move()= 0;
-     virtual void  attack() = 0;
+      virtual void  attack(LegionUnit* enemy) = 0;
      virtual void retreat()=0; 
      virtual void defend() = 0;
 
