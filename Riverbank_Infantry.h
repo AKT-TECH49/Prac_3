@@ -1,0 +1,23 @@
+#ifndef RIVERBANK_INFANTRY_H
+#define RIVERBANK_INFANTRY_H
+
+#include "Infantry.h"
+
+class RiverbankInfantry : public Infantry
+{
+   private:
+    int health;
+    int defense;
+
+    
+   public:
+       RiverbankInfantry(int health, int defense);
+
+       void move() override;
+     void  attack() override ;
+     void  defend() override ;
+    void  retreat() override;
+
+     int getHealth() const override;
+};
+#endif
